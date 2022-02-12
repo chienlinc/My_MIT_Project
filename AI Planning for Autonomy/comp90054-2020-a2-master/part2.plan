@@ -1,0 +1,6 @@
+(move a1 b1)
+(move b1 b2)
+(move b2 b3)
+(move b3 b4)
+(move b4 a4)
+(move a4 a5)

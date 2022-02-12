@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" type="text/javascript"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <h1>2015.01.01 - 2021.06.30 United States Police Shooting and Firearm Background Check</h1>
+    <h3> State and Race</h3>
+    <div class="race-container">
+      <div class="item">
+        <iframe height=100%, width=100%, src="./map.html">
+        </iframe>
+      </div>
+      <div class="item">
+        <canvas id="race" width="400" height="250"</canvas>
+        <script type='module'>
+        	import {config} from "./race_compare.js";
+        	var ctx = document.getElementById('race').getContext('2d');
+        	var race_chart = new Chart(ctx, config);
+        </script>
+      </div>
+    </div>
+
+    <h3> State and Gun</h3>
+    <div class="gun-container">
+      <div class="item">
+      <canvas id="guns" width=100% height=100%></canvas>
+      <script type='module'>
+      	import {config} from "./guns_compare.js";
+      	var ctx = document.getElementById('guns').getContext('2d');
+      	var gun_chart = new Chart(ctx, config);
+      </script>
+      </div>
+      <div class="item">
+        <canvas id="gun" width=100%  height=100% ></canvas>
+      </div>
+      <div class="item">
+        <canvas id="arm" width=100%  height=100% ></canvas>
+      </div>
+      <div class="item">
+        <canvas id="months" width=100%  height=100% ></canvas>
+      </div>
+    </div>
+  </body>
+</html>

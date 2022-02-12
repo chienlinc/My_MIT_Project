@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+.race-container {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.gun-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.item {
+  padding: 10px;
+  flex: 50%;
+
+}
+
+@media (max-width: 500px) {
+  .race-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  .gun-container {
+    flex-direction: column;
+  }
+}
